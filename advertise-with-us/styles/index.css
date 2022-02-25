@@ -1,0 +1,141 @@
+#main {
+	background-color: rgba(0, 0, 255, 0.5);
+}
+
+#header {
+	background-color: indigo;
+	color: white;
+}
+
+#footer {
+	background-color: indigo;
+}
+
+#sideNav {
+	background-color: indigo;
+}
+
+#sideNav .sideLinks a {
+	color: white;
+}
+
+#subscribePort {
+	background-color: blue;
+}
+
+.container {
+	width: 80%;
+	background-color: rgb(0, 0, 255, 0.1);
+	box-shadow: 0 20px 20px -20px rgba(0, 0, 255, 0.8);
+	border-top-left-radius: 5%;
+	border-top-right-radius: 5%;
+	border-bottom-left-radius: 10%;
+	border-bottom-right-radius: 30%;
+	padding: 20% 10%;
+	margin: 1cm 0;
+}
+
+.heading {
+	color: white;
+	font-size: 45px;
+	font-weight: 700;
+	font-family: georgia;
+	margin: none;
+	display: inline-block;
+}
+
+.statement {
+	color: white;
+	font-size: 30px;
+	font-weight: 300;
+	font-family: times;
+	margin: none;
+}
+
+.list {
+	margin-left: 2cm;
+}
+
+.list li {
+	color: white;
+	font-size: 35px;
+	font-weight: 300;
+	font-family: times;
+	margin: none;
+}
+
+.centerHolder {
+	width: 100%;
+	text-align: center;
+}
+
+#startButton {
+	height: 4cm;
+	width: 10cm;
+	border-radius: 10%;
+	background-color: rgba(0, 0, 255, 0.5);
+	font-size: 40px;
+	font-weight: 700;
+	font-family: monaco;
+	color: white;
+}
+
+#coverHolder {
+	position: relative;
+	width: 100%;
+}
+	
+#coverHolder #coverImage {
+	width: 100%;
+}
+	
+#coverHolder #quarterCircle {
+	background-color: rgba(0, 0, 255, 0.8);
+	height: 120%;
+	width: 100%;
+	border-radius: 50%;
+	overflow: hidden;
+	position: absolute;
+	transform: translateX(-25%) translateY(-40%);
+}
+
+#coverHolder #quarterCircle #txtHolder {
+	position: absolute;
+	top: 45%;
+	left: 30%;
+	max-width: 50%;
+	overflow: hidden;
+	color: white;
+	font-size: 35px;
+	font-weight: 700;
+}
+
+#coverShow {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 45%;
+}
+
+#coverShow table {
+	width: 100%;
+	height: 100%;
+}
+
+#coverShow img {
+	background-color: blue;
+	border-radius: 10%;
+	box-shadow: 0 0 10px 0 black;
+}
+
+#coverShow #img1 {
+	height: 5cm;
+}
+
+#coverShow #img2 {
+	height: 6cm;
+}
+
+#coverShow #img3 {
+	height: 5cm;
+}

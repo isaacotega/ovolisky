@@ -1,0 +1,90 @@
+<div id="subscribePort">
+	
+	<br><br>
+ 
+ 	<label id="heading">Subscribe to Our Newsletter</label>
+ 	
+ 	<br><br>
+ 	
+ 	<label id="statement">Subscribe to our newsletter today and get updates on new articles and products on ovolisky forwarded directly to your mail!</label>
+ 	
+ 	<br><br>
+ 	
+ 	<label id="response"></label>
+ 	
+ 	<br><br>
+ 	
+ 	<input id="inpSubscribe" placeholder="Enter email address" type="email">
+ 	
+ 	<button id="btnSubscribe">Subscribe</button>
+ 		
+ 	<br><br><br><br>
+ 	
+ </div>
+ 
+ <script>
+ 	
+ 	$("#btnSubscribe").click(function() {
+ 		
+ 		var email = $("#inpSubscribe").val();
+ 		
+ 		$("#inpSubscribe").val("");
+ 	
+ 		$("#response").html("Sending request . . .");
+ 						
+ 		$.ajax({
+ 			type: "POST",
+ 			url: "../scripts/subscribe.php",
+ 			dataType: "JSON",
+ 			data: {
+ 				email: email
+ 			},
+ 			success: function(response) {
+ 			
+ 				if(response.status == "success") {
+ 					
+ 					$("#response").html("Thanks for subscribing for our newsletter. <em>" + response.email + "</em>. Stay tuned for updates");
+ 				
+ 				}
+ 				
+ 				else if(response.status == "error") {
+ 					
+ 					if(response.cause == "emptyEmail") {
+ 					
+ 						$("#response").html("Please enter an email address");
+ 						
+ 					}
+ 					
+ 					else if(response.cause == "emailExists") {
+ 					
+ 						$("#response").html("Dear <em>" + response.email + "</em>, you are already subscribed to our newsletter");
+ 						
+ 					}
+ 					
+ 					else if(response.cause == "unknown") {
+ 					
+ 						$("#response").html("Error sending request, please try again");
+ 						
+ 					}
+ 					
+ 					else {}
+ 				
+ 				}
+ 				
+ 				else {
+ 				
+ 					$("#response").html("Error sending request, please try again");
+ 				
+ 				}
+ 				
+ 			},
+ 			error: function() {
+ 			
+ 				$("#response").html("Error sending request, please try again");
+ 				
+ 			}
+ 		});
+ 	
+ 	});
+ 
+ </script>

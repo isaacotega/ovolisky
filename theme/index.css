@@ -1,0 +1,834 @@
+body {
+	margin: 0;
+}
+
+button {
+	outline: none;
+}
+ 
+ input {
+	outline: none;
+}
+
+ select {
+	outline: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.bigButton {
+	color: white;
+	font-size: 25px;
+	margin-left: 50%;
+	height: 2cm;
+	width: 8cm;
+	border-radius: 10%;
+	background-color: green;
+	transform: translateX(-50%);
+}
+				
+ /* Header */
+ 
+ #header {
+	background-color: indigo;
+	height: 3.2cm;
+	width: 100%;
+	border: none;
+	box-shadow: 0 0 20px 0 black;
+	outline: none;
+	position: fixed;
+	top: 0;
+	z-index: 1;
+}
+
+#heading {
+	font-weight: 700;
+	font-size: 40px;
+	color: white;
+	float: left;
+}
+
+#navIcon {
+	font-weight: 700;
+	font-size: 40px;
+	float: left;
+	margin: 0 1cm 0 3mm;
+	transition: color 0.2s;
+	color: white;
+	transform: translateY(-10%);
+}
+
+/* SideNav */
+
+#sideNav {
+	width: 0%;
+	background-color: rgba(0, 0, 0, 0.5);
+	height: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 2;
+	transition: width 0.1s;
+	margin: none;
+	overflow: hidden;
+}
+
+#sideNav #container {
+	background-color: #FFF0F0;
+	height: 100%;
+	width: 55%;
+	border: none;
+	outline: none;
+	text-align: center;
+	position: relative;
+	overflow-x: hidden;
+	position: relative;
+}
+
+#sideNav #head {
+	background-color: indigo;
+	height: 3.2cm;
+	width: 0%;
+	position: fixed;
+	top: 0;
+}
+
+#sideNav #head #name {
+	font-weight: 700;
+	font-size: 40px;
+	color: white;
+	float: left;
+	margin-left: 1cm;
+}
+
+#sideNav #body {
+	padding-top: 4cm;
+	text-align: left;
+}
+
+.sideLinks {
+	font-weight: 300;
+	font-size: 30px;
+	display: block;
+	height: 3cm;
+	line-height: 3cm;
+	color: indigo;
+}
+
+#sideNav #body svg {
+	padding: 0 5mm;
+	width: 1cm;
+	height: 1cm;
+	fill: indigo;
+}
+
+.sideLinks:active {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.sideLinks a {
+	color: black;
+}
+
+/* Forms */
+
+.form {
+	width: 90%;
+	margin-left: 5%;
+	border-radius: 3%;
+	box-shadow: 0 0 10px 0 black;
+	text-align: center;
+	background-color: #EDF4C3;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.form .formHeading {
+	font-size: 40px;
+	font-weight: 300;
+}
+
+.form .formError {
+	color: red;
+	font-size: 25px;
+	font-weight: 300;
+	height: 2cm;
+	width: 80%;
+	margin: 1cm 0 0 10%;
+	border-radius: 5%;
+	border: 2px dashed red;
+	display: none;
+}
+
+.form .formError label {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.form .formLabel {
+	font-size: 30px;
+	font-weight: 300;
+}
+
+.form .input {
+	height: 2cm;
+	width: 80%;
+	margin: 3mm 0;
+	border-radius: 5%;
+	font-size: 30px;
+}
+
+.form .radioHolder {
+	width: 80%;
+	margin-left: 10%;
+	text-align: left;
+}
+
+.form .radio + label {
+	font-size: 30px;
+	color: indigo;
+}
+
+.form .radio {
+	height: 1cm;
+	width: 1cm;
+	margin: 0 2mm;
+}
+
+.form table {
+	width: 80%;
+	font-size: 25px;
+	font-weight: 300;
+	margin-left: 10%;
+}
+
+.form table td {
+	height: 1.5cm;
+}
+
+.form button {
+	height: 2cm;
+	width: 7cm;
+	border-radius: 10%;
+	font-size: 30px;
+	background-color: #F7C6A3;
+	color: white;
+	border: none;
+}
+
+.form button:active {
+	background-color: #F79957;
+}
+
+/* Edit form */
+
+.editForm {
+	width: 100%;
+	text-align: center;
+	background-color: #EDF4C3;
+}
+
+.editForm .formHeading {
+	font-size: 30px;
+	font-weight: 300;
+}
+
+.editForm .formError {
+	color: red;
+	font-size: 25px;
+	font-weight: 300;
+	height: 1.5cm;
+	width: 80%;
+	margin: 1cm 0 0 10%;
+	border-radius: 5%;
+	border: 2px dashed red;
+	display: none;
+}
+
+.editForm .formError label {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.editForm .formLabel {
+	font-size: 25px;
+	font-weight: 300;
+}
+
+.editForm input {
+	height: 1.5cm;
+	width: 80%;
+	margin: 3mm 0;
+	font-size: 25px;
+}
+
+.editForm table {
+	width: 100%;
+	font-size: 25px;
+	font-weight: 300;
+}
+
+.editForm table td {
+	height: 1.5cm;
+}
+
+.editForm .radioHolder {
+	width: 80%;
+	margin-left: 10%;
+	text-align: left;
+}
+
+.editForm .radio + label {
+	font-size: 30px;
+	color: indigo;
+}
+
+.editForm .radio {
+	height: 0.7cm;
+	width: 0.7cm;
+	margin: 0 2mm;
+}
+
+.editForm button {
+	height: 2cm;
+	width: 7cm;
+	border-radius: 10%;
+	font-size: 30px;
+	background-color: #F7C6A3;
+	color: white;
+	border: none;
+}
+
+.editForm button:active {
+	background-color: #F79957;
+}
+
+/* Main */
+
+h1 {
+	font-weight: 300;
+	text-align: center;
+	width: 100%;
+	color: indigo;
+	font-size: 35px;
+	font-family: times;
+	margin: 0;
+}
+
+h2 {
+	text-align: center;
+	font-size: 30px;
+}
+				
+body #main {
+	margin-top: 3cm;
+	margin-right: 0;
+	width: 100%;
+	background-color: white;
+}
+
+#postTitleHolder {
+	width: 100%;
+	margin: 0;
+	background-color: #FFF0F0;
+}
+
+#postTitleHolder h2 {
+	font-weight: 300;
+	text-align: left;
+	width: 90%;
+	margin-left: 5%;
+	color: black;
+	font-size-blok: 35px;
+	font-family: times;
+}
+
+#postTitleHolder #bookmarkIcon {
+	height: 1cm;
+	width: 1cm;
+	float: right;
+	margin: 0 2mm;
+}
+
+#postTitleHolder #postStats {
+	text-align: right;
+}
+
+#postTitleHolder label {
+	margin-right: 10px; 
+}
+
+#affilliateAwareness {
+	font-weight: 300;
+	text-align: center;
+	width: 98%;
+	font-size: 18px;
+	margin: 1%;
+	background-color: #EDF4C3;
+}
+
+.statement {
+	font-size: 30px;
+	margin: 3%;
+	text-indent: 20px;
+}
+
+#productsList li {
+	color: darkblue;
+	margin: 3mm 0;
+}
+ 
+.productBox {
+	border: 2px dotted black;
+	border-radius: 2%;
+	width: 98%;
+	margin: 2cm 1%;
+}
+
+.nameOfProduct {
+	font-size: 35px;
+	font-weight: 300;
+	color: black;
+	margin-left: 0.5cm;
+}
+
+.productImage {
+	width: 100%;
+	height: 20cm;
+}
+
+.descriptionOfProduct {
+	width: 96%;
+	margin-left: 2%;
+}
+
+.descriptionOfProduct p {
+	font-size: 28px;
+	color: black;
+	text-indent: 0.5cm;
+}
+
+.orderButtonHolder {
+	width: 100%;
+	text-align: left;
+}
+
+.orderButtonHolder .eachButtonHolder {
+	height:  4cm;
+}
+
+.orderButtonHolder .priceHolder {
+	width: 3cm;
+	height: 3cm;
+	margin: 0.5cm;
+	float: left;
+	text-align: center;
+}
+
+.orderButtonHolder .priceHolder .originalPrice {
+	font-size: 23px;
+	color: red;
+}
+
+.orderButtonHolder .priceHolder .discountPrice {
+	font-size: 28px;
+	color: black;
+}
+
+.orderButtonHolder button {
+	width: 8cm;
+	height: 3cm;
+	font-weight: 300;
+	font-size: 25px;
+	color: white;
+	border-radius: 10%;
+	float: left;
+	margin: 0.5cm;
+}
+
+.orderButton1 {
+	background-color: orange;
+}
+
+.orderButton2 {
+	background-color: indigo;
+}
+
+.articleSuggestion {
+	width: 96%;
+	margin: 0 2%;
+	border: 2px solid #EDF4C3;
+	border-left: 10px solid #EDF4C3;
+}
+
+.articleSuggestion .statement {
+	font-family: cursive;
+	margin: 1cm;
+	font-size: 30px;
+	font-weight: 300;
+	color: red;
+}
+
+.articleSuggestion .postName {
+	font-family: times;
+	margin: 1cm;
+	font-size: 30px;
+	font-weight: 300;
+}
+
+#lblRelatedArticles {
+	font-weight: 300;
+	font-size: 40px;
+	margin-left: 20px;
+}
+
+/* Post cards */
+
+.postCards {
+	width: 98%;
+	margin: 5mm 1%;
+	height: 300px;
+	background-color: white;
+	box-shadow: 0 0 5px 0 black;
+	border-radius: 1%;
+	text-align: center;
+	transition: box-shadow 0.5s;
+	position: relative;
+}
+
+.postCards:active {
+	box-shadow: 0 0 0 0;
+}
+				
+.postCards .title {
+	color: indigo;
+	font-size: 40px;
+	font-weight: 300;
+	font-family: times;
+	text-align: left;
+	margin-left: 30px;
+}
+ 
+.postCards .postStats {
+	width: 100%;
+	text-align: right;
+	color: indigo;
+	font-size: 20px;
+	font-weight: 300;
+	font-family: times;
+	position: absolute; 
+	bottom: 20px; 
+}
+ 
+.postCards label {
+	margin-right: 20px;
+}
+				
+.postCards .statsIcon {
+	height: 1cm;
+	width: 1cm;
+	color: black;
+}
+ /* Subscribe Port */
+
+#subscribePort {
+	background-color: black;
+	width: 80%;
+	margin: 1cm 10%;
+	text-align: center;
+}
+
+#subscribePort #heading {
+	color: white;
+	font-size: 35px;
+	font-weight: 700;
+	text-align: center;
+	width: 100%;
+}
+
+#subscribePort #statement {
+	color: white;
+	font-size: 20px;
+	width: 90%;
+	display: block;
+	margin-top: 1cm;
+}
+
+#subscribePort #response {
+	color: white;
+	font-size: 25px;
+	font-weight: 700;
+	width: 90%;
+}
+
+#subscribePort #inpSubscribe {
+	width: 60%;
+	height: 2cm;
+	color: black;
+	font-size: 30px;
+	background-color: white;
+	margin: 0;
+}
+
+#subscribePort #btnSubscribe {
+	width: 20%;
+	height: 2cm;
+	color: white;
+	font-size: 30px;
+	background-color: red;
+	font-weight: 700;
+	margin: 0;
+}
+
+ /* Categories page */
+ 
+#postsNavigator {
+	width: 100%;
+	margin: 2cm 0;
+}
+
+#postsNavigator a {
+	font-size: 30px;
+	margin: 0 5mm;
+}
+
+#postsNavigator a:nth-child(2) {
+	float: right;
+}
+
+/* Footer */
+
+#footer {
+	background-color: black;
+	width: 100%;
+	margin: 0;
+	text-align: left;
+}
+
+#footer #left {
+	width: 50%;
+	float: left;
+	margin: 0;
+}
+
+#footer #right {
+	width: 50%;
+	float: right;
+	margin: 0;
+}
+
+#footer #bottom {
+	text-align: center;
+}
+
+#footer #left label {
+	font-weight: 300;
+	font-size: 25px;
+	margin-left: 20px;
+	color: white;
+}
+
+#footer #right label {
+	font-weight: 300;
+	font-size: 25px;
+	color: white;
+}
+
+#footer #bottom #copyright {
+	font-weight: 700;
+	font-size: 35px;
+	color: white;
+}
+
+#footer #bottom #reservedRight {
+	font-weight: 700;
+	font-size: 20px;
+	color: orange;
+}
+
+/* full loader */
+
+#fullLoader {
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	z-index: 9;
+	top: 0;
+	text-align: center;
+	background: rgba(255, 239, 193, 0.7);
+}
+
+#fullLoader #loader {
+	width: 3cm;
+	height: 3cm;
+	border: 10px solid rgba(255, 239, 193, 0.7);
+	border-top: 10px solid orange;
+	border-radius: 50%;
+	position: absolute;
+	top: 45%;
+	left: 43%;
+	transform: translateY(-50%);
+	-webkit-animation: spin 0.4s linear infinite;
+}
+
+#fullLoader #statement {
+	position: absolute;
+	top: 45%;
+	transform: translateY(5cm) translateX(-50%);
+	left: 50%;
+	color: orange;
+	font-size: 40px;
+}
+
+/* Alert box */
+
+#alertBox {
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	z-index: 8;
+	top: 0;
+	background: rgba(255, 239, 193, 0.3);
+}
+
+#alertBox #mainBox {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	height: 10cm;
+	width: 70%;
+	background-color: white;
+	text-align: center;
+	border: 1px solid black;
+	box-shadow: 0 0 15px 0 black;
+}
+
+#alertBox #mainBox #head {
+	height: 2cm;
+	width: 100%;
+	background-color: #EDF4C3;
+	font-size: 10mm;
+	outline: none;
+	border: none;
+}
+
+#alertBox #mainBox #foot {
+	height: 2cm;
+	width: 100%;
+	background-color: #EDF4C3;
+	outline: none;
+	border: none;
+}
+
+#alertBox #mainBox #foot button:active {
+	background-color: #FFF0C0;
+}
+
+#alertBox #mainBox #messageHolder {
+	height: 6cm;
+	text-align: left;
+	overflow-y: scroll;
+}
+
+#alertBox #mainBox #messageHolder label {
+	font-size: 27px;
+}
+
+#alertBox #mainBox #foot .cancelBtn {
+	height: 100%;
+	width: 49.6%;
+	font-size: 8mm;
+	margin: none;
+}
+
+#alertBox #mainBox #foot .okBtn {
+	height: 100%;
+	width: 49.6%;
+	font-size: 8mm;
+	margin: none;
+}
+
+#alertBox #mainBox #foot .bigOkBtn {
+	height: 100%;
+	width: 100%;
+	font-size: 8mm;
+	margin: none;
+	border-radius: 0%;
+}
+
+/* Snack bars */
+
+#snackBar {
+	max-width: 80%;
+	height: 0;
+	line-height: 2.5cm;
+	background-color: black;
+	color: white;
+	position: fixed;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	box-shadow: 0 0 7px 0 black;
+	font-size: 25px;
+	text-align: center;
+	transition: height 0.2s;
+	z-index: 7;
+	padding: 0 1cm;
+}
+
+#snackBar a {
+	color: cyan;
+	text-decoration: underline;
+}
+
+/* Placeholders */
+
+#placeholder {
+	height: 15cm;
+	width: 90%;
+	display: table;
+	text-align: center;
+	padding: 5% 5% 15% 5%;
+}
+
+#placeholder #message {
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 30px;
+	font-weight: 700;
+}
+
+#placeholder #loader {
+	width: 1cm;
+	height: 1cm;
+	border: 5px solid rgba(255, 239, 193, 0.7);
+	border-top: 5px solid black;
+	border-radius: 50%;
+	display: inline-block;
+	margin: 0 3mm;
+	vertical-align: middle;
+	-webkit-animation: spin 0.4s linear infinite;
+}
+
+/* Others */
+
+.hidden {
+	display: none;
+}
+
+/* Animation */
+
+@-webkit-keyframes spin {
+	
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
+
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+	
+}
